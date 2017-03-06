@@ -4,9 +4,31 @@ $(document).ready(function(){
     });
 });
 
+/*
 $(document).ready(function(){
   $("#para2").mouseup(function() {
     alert("You entered paragraph 2!");
+  });
+});
+*/
+
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "#cccccc");
+  });
+});
+
+$(document).ready(function(){
+  $("input").blur(function(){
+    $(this).css("background-color", "#ffffff")
+  });
+});
+
+$(document).ready(function(){
+  $("p").on({
+      mouseenter: function() { $(this).css("background-color", "lightgray"); },
+      mouseleave: function() { $(this).css("background-color", "lightblue"); },
+      mouseclick: function() { $(this).css("background-color", "yellow"); }
   });
 });
 
